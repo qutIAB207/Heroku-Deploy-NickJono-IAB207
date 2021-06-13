@@ -9,5 +9,5 @@ def index():
 
 
 @bp.route('/festival')
-def festival():
+def festival_func():
     return render_template('festival.html')
