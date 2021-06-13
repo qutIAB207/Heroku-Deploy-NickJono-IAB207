@@ -8,6 +8,6 @@ def index():
     return render_template('landing.html')
 
 
-# @bp.route('/festival')
-# def festival():
-#    return render_template('festival.html')
+@bp.route('/festival')
+def festival():
+    return render_template('festival.html')
