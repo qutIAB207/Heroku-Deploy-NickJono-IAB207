@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JamFest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheets/style.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">JamFest</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapsibleContent" aria-controls="navbarCollapsibleContent"
+                    aria-expanded="false" aria-label="Toggle navigation"">
+                    <span class=" navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapsibleContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html">Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="event_creation.html">Event Creation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="row" name="row1">
+                <div class="col-sm-12">
+                    <form class="d-flex justify-content-left" id="home-options">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Select a genre
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Pop</a>
+                                <a class="dropdown-item" href="#">Hip Hop</a>
+                                <a class="dropdown-item" href="#">Rock</a>
+                                <a class="dropdown-item" href="#">EDM</a>
+                                <a class="dropdown-item" href="#">Folk</a>
+                            </div>
+                        </div>
+                        <input class="form-control me-2" type="search" id="home-search"
+                            placeholder="Filter by festival name, artist, genre, or venue..." aria-label="Search" />
+                        <button class="btn btn-outline-primary" id="home-submit" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" name="row2">
+                <div class="col-xs-1" id="home-title">
+                    Here are some festivals you might be interested in:
+                </div>
+            </div>
+            <div class="row" name="row3">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/festival_img.jpg" class="card-img">
+                        <div class="card-body">
+                            <span class=festival-title>Festival 1</span>
+                            <br>
+                            Genres: Hip Hop, Pop
+                            <br>
+                            Date: 06/06/21
+                            <br>
+                            <span class="status">STATUS: BOOKED</span>
+                            <br>
+                            <span class="button-wrapper">
+                                <a href="festival.html" class="btn btn-outline-primary" role="button">See More</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/festival_img_2.jpg" class="card-img">
+                        <div class="card-body">
+                            <span class=festival-title>Festival 2</span>
+                            <br>
+                            Genres: Rock
+                            <br>
+                            Date: 10/06/21
+                            <br>
+                            <span class="status">STATUS: INACTIVE</span>
+                            <br>
+                            <span class="button-wrapper">
+                                <a href="festival.html" class="btn btn-outline-primary" role="button">See More</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/festival_img_3.jpg" class="card-img">
+                        <div class="card-body">
+                            <span class=festival-title>Festival 3</span>
+                            <br>
+                            Genres: Pop
+                            <br>
+                            Date: 25/06/21
+                            <br>
+                            <span class="status">STATUS: UPCOMING</span>
+                            <br>
+                            <span class="button-wrapper">
+                                <a href="festival.html" class="btn btn-outline-primary" role="button">See More</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/festival_img_4.jpg" class="card-img">
+                        <div class="card-body">
+                            <span class=festival-title>Festival 4</span>
+                            <br>
+                            Genres: EDM
+                            <br>
+                            Date: 20/05/21
+                            <br>
+                            <span class="status">STATUS: BOOKED</span>
+                            <br>
+                            <span class="button-wrapper">
+                                <a href="festival.html" class="btn btn-outline-primary" role="button">See More</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/festival_img_5.jpg" class="card-img">
+                        <div class="card-body">
+                            <span class=festival-title>Festival 5</span>
+                            <br>
+                            Genres: Hip Hop
+                            <br>
+                            Date: 07/05/21
+                            <br>
+                            <span class="status">STATUS: BOOKED</span>
+                            <br>
+                            <span class="button-wrapper">
+                                <a href="festival.html" class="btn btn-outline-primary" role="button">See More</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/festival_img_6.jpg" class="card-img">
+                        <div class="card-body">
+                            <span class=festival-title>Festival 6</span>
+                            <br>
+                            Genres: Pop, Rock
+                            <br>
+                            Date: 15/06/21
+                            <br>
+                            <span class="status">STATUS: CANCELLED</span>
+                            <br>
+                            <span class="button-wrapper">
+                                <a href="festival.html" class="btn btn-outline-primary" role="button">See More</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/festival_img_7.jpg" class="card-img">
+                        <div class="card-body">
+                            <span class=festival-title>Festival 7</span>
+                            <br>
+                            Genres: Pop
+                            <br>
+                            Date: 08/07/21
+                            <br>
+                            <span class="status">STATUS: UPCOMING</span>
+                            <br>
+                            <span class="button-wrapper">
+                                <a href="festival.html" class="btn btn-outline-primary" role="button">See More</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <img src="img/festival_img_8.jpg" class="card-img">
+                        <div class="card-body">
+                            <span class=festival-title>Festival 8</span>
+                            <br>
+                            Genres: Hip Hop
+                            <br>
+                            Date: 20/07/21
+                            <br>
+                            <span class="status">STATUS: UPCOMING</span>
+                            <br>
+                            <span class="button-wrapper">
+                                <a href="festival.html" class="btn btn-outline-primary" role="button">See More</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-copyright bg-dark text-center py-3">© 2021 Copyright: JamFest Creative INC.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

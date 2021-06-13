@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JamFest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">JamFest</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapsibleContent" aria-controls="navbarCollapsibleContent"
+                    aria-expanded="false" aria-label="Toggle navigation"">
+                    <span class=" navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapsibleContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html">Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="event_creation.html">Event Creation</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main style="display: flex; justify-content: center;">
+        <div class="event-creation-form">
+            <h2>
+                Admin Event Creation
+            </h2>
+            <form>
+                <p>
+                    Name:
+                    <br>
+                    <input class="form-control me-2" type="search" placeholder="Enter festival name"
+                        aria-label="Search">
+                    <br>
+                    Genre:
+                </p>
+                <div class="dropdown" style="margin-left: 20px;">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select a genre
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Pop</a>
+                        <a class="dropdown-item" href="#">Hip Hop</a>
+                        <a class="dropdown-item" href="#">Rock</a>
+                        <a class="dropdown-item" href="#">EDM</a>
+                        <a class="dropdown-item" href="#">Folk</a>
+                    </div>
+                </div>
+                <p style="margin-top: 0px;">
+                    <br>
+                    Artists:
+                    <br>
+                    <input class="form-control me-2" type="search" placeholder="Enter artists" aria-label="Search">
+                    <br>
+                    Display Image:
+                    <span style="margin-left: 20px;">
+                        <a class="btn btn-outline-secondary" role="button">Select from file</a>
+                    </span>
+                    <br>
+                    <br>
+                    Dates and Times:
+                </p>
+                <div class="container-fluid" style="margin-left: 20px; margin-right: 20px;">
+                    <div class="row" name="row1">
+                        <div class="col-sm-6">From<br><input class="datetime-input" type="datetime-local" value="">
+                        </div>
+                        <div class="col-sm-6">To<br><input class="datetime-input" type="datetime-local" value=""></div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <p>
+                    Additional Information
+                    <textarea class="form-control me-2" type="search" placeholder="Enter additional information"
+                        aria-label="Search" rows="3"></textarea>
+                </p>
+                <br>
+                <p style="margin-bottom: 50px;">
+                    <button style="float: right;" class="btn btn-outline-primary" type="submit">Confirm</button>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-copyright bg-dark text-center py-3">© 2021 Copyright: JamFest Creative INC.
+        </div>
+    </footer>
+
+    <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

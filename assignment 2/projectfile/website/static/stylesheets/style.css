@@ -1,0 +1,135 @@
+#home-title {
+    font-size: 20px;
+}
+
+#home-search {
+    margin-left: 3%;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 30px;
+}
+
+.card {
+    padding: 10px;
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+.col-lg-3, .col-md-6, .col-sm-12 {
+    margin-bottom: 20px;
+}
+
+.festival-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.status {
+    color: lightslategrey;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.card-img {
+    position: relative;
+    margin-top: -10%;
+    margin-left: -10%;
+    width: 120%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.card-body {
+    line-height: 190%;
+    position: relative;
+}
+
+.button-wrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+div.polaroid {
+    width: 80%;
+    min-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    overflow: hidden;
+  }
+  
+  div.container {
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+h1 {
+    margin: 20px;
+}
+
+p {
+    margin: 20px;
+    font-size: 20px;
+    line-height: 250%;
+}
+
+.button-row {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.festival-btn {
+    width: 30%
+}
+
+.comment-form {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.event-creation-form {
+    width: 80%;
+    min-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 20px;
+    padding-bottom: 30px;
+}
+
+h2 {
+    margin: 20px;
+}
+
+.datetime-input {
+    width: 90%;
+    margin-top: 10px;
+}
+
+.footer-copyright {
+    padding: 20px;
+    color: white;
+}
+
+.user-booking-history {
+    width: 80%;
+    min-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 20px;
+    padding-bottom: 30px;
+}
+
+.booking-heading {
+    font-size: 24px;
+}
+
+.booking-img {
+    width: 60%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
