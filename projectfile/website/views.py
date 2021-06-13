@@ -6,3 +6,8 @@ bp = Blueprint('main', __name__)
 @bp.route('/')
 def index():
     return render_template('landing.html')
+
+
+@bp.route('/festival')
+def festival():
+    return render_template('festival.html')
