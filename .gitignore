@@ -1,7 +1,7 @@
 # Byte-compiled / optimized / DLL files
 #__pycache__/
-*.py[cod]
-*$py.class
+#*.py[cod]
+#*$py.class
 
 # C extensions
 *.so
@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+#lib/
 lib64/
 parts/
 sdist/
@@ -22,9 +22,9 @@ var/
 wheels/
 pip-wheel-metadata/
 share/python-wheels/
-*.egg-info/
+#*.egg-info/
 .installed.cfg
-*.egg
+#*.egg
 MANIFEST
 
 # PyInstaller
@@ -62,8 +62,8 @@ db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
-instance/
-.webassets-cache
+#instance/
+#.webassets-cache
 
 # Scrapy stuff:
 .scrapy
