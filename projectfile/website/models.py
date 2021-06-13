@@ -17,7 +17,7 @@ class Event(db.model):
     name = db.Column(db.String(100), index=True, unique=True, nullable=False)
     venue = db.Column(db.String(100), index=True, nullable=False)
     genre = db.Column(db.String(100), nullable=False)
-    artists = db.Column(db.String(500),  nullable=False)
+    artists = db.Column(db.String(300),  nullable=False)
     date = db.Column(db.datetime.date(), nullable=False)
     time = db.Column(db.datetime.time(), nullable=False)
     status = db.Column(db.String(100), nullable=False)
