@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/qutIAB207/Heroku-Deploy-NickJono-IAB207/issues"
   },
-  "homepage": "https://github.com/qutIAB207/Heroku-Deploy-NickJono-IAB207#readme"
+  "homepage": "https://github.com/qutIAB207/Heroku-Deploy-NickJono-IAB207#readme",
+  "dependencies": {
+    "flask": "^0.2.10",
+    "flask-wtf": "0.0.1"
+  }
 }
