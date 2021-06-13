@@ -1,1 +1,1 @@
-web: gunicorn 'projectfile:start_app()'
+web: gunicorn 'projectfile.website:create_app()'
