@@ -11,3 +11,13 @@ def landing():
 @bp.route('/festival')
 def festival():
     return render_template('festival.html')
+
+
+@bp.route('/account')
+def festival():
+    return render_template('account.html')
+
+
+@bp.route('/event_creation')
+def festival():
+    return render_template('event_creation.html')
