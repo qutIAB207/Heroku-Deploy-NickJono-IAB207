@@ -19,5 +19,5 @@ def account():
 
 
 @bp.route('/event_creation')
-def eventCreation():
+def event_creation():
     return render_template('event_creation.html')
