@@ -14,10 +14,10 @@ def festival():
 
 
 @bp.route('/account')
-def festival():
+def account():
     return render_template('account.html')
 
 
 @bp.route('/event_creation')
-def festival():
+def eventCreation():
     return render_template('event_creation.html')
