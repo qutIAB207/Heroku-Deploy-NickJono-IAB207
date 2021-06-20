@@ -14,7 +14,7 @@ class CreateEventForm(FlaskForm):
     genre = StringField("Genre:", validators=[InputRequired('Please select a Genre')])
     artists = StringField("Artists:", validators=[InputRequired('Please enter Artists')])
     ##image = FileField(validators=[FileAllowed(photos, 'Image only!'), FileRequired('File was empty!')])
-    date = artists = StringField("Date:", validators=[InputRequired('Please enter date')])
+    date =  StringField("Date:", validators=[InputRequired('Please enter date')])
     
 
     submit = SubmitField('Create Event')
