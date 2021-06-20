@@ -12,11 +12,11 @@ from flask_wtf.file import FileField, FileRequired, FileAllowed
 class CreateEventForm(FlaskForm):
     
     name = StringField("Name:", validators=[InputRequired('Please enter an Event name')])
-    genre = StringField("Genre:", validators=[InputRequired('Please select a Genre')])
+    #genre = StringField("Genre:", validators=[InputRequired('Please select a Genre')])
     artists = StringField("Artists:", validators=[InputRequired('Please enter Artists')])
     ##image = FileField(validators=[FileAllowed(photos, 'Image only!'), FileRequired('File was empty!')])
     ##datesNtimes
-    description = StringField("Description:")
+    #description = StringField("Description:")
 
     submit = SubmitField('Create Event')
     
