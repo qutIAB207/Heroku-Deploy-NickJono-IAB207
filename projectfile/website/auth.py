@@ -20,8 +20,10 @@ def create():
 
     if event_form.validate_on_submit():
         print("Succussfully Created Event", "success")
+        return redirect(url_for('auth.create'))
     
     return render_template("templates/event.creation.html", form=event_form)
+
 
 # test
 

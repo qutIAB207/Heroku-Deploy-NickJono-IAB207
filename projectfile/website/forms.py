@@ -4,8 +4,13 @@ from wtforms.fields import TextAreaField, SubmitField, StringField, PasswordFiel
 from wtforms.validators import InputRequired, Length, Email, EqualTo
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 
+#class Event:
+#    def __init__(self, name, artists):
+#        self.name = name
+#        self.artists = artists
 
 class CreateEventForm(FlaskForm):
+    
     name = StringField("Name:", validators=[InputRequired('Please enter an Event name')])
     genre = StringField("Genre:", validators=[InputRequired('Please select a Genre')])
     artists = StringField("Artists:", validators=[InputRequired('Please enter Artists')])
