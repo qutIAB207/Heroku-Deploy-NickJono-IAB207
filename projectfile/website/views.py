@@ -49,7 +49,10 @@ def event_creation():
     if event_form.validate_on_submit():
         festival = Festival(
             name=event_form.name.data,
-            artists=event_form.name.data
+            venue=event_form.venue.data,
+            genre=event_form.genre.data,
+            artists=event_form.artists.data,
+            date=event_form.date.data
         )
         db.session.add(festival)
         db.session.commit()

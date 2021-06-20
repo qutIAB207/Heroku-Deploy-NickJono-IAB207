@@ -20,10 +20,8 @@ class Festival(db.Model):
     venue = db.Column(db.String(100), index=True, nullable=False)
     genre = db.Column(db.String(100), nullable=False)
     artists = db.Column(db.String(300),  nullable=False)
-    date = db.Column(db.Date(), nullable=False)
-    time = db.Column(db.Time(), nullable=False)
-    status = db.Column(db.String(100), nullable=False)
-    ticket_availability = db.Column(db.String(100), nullable=False)
+    date = db.Column(db.String(300), nullable=False)
+    #time = db.Column(db.Time(), nullable=False)
     reviews = db.relationship('Review', backref='festival')
     bookings = db.relationship('Booking', backref='festival')
 
