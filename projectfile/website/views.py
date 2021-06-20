@@ -44,12 +44,12 @@ def event_creation():
     event_form = forms.CreateEventForm()
 
     if event_form.validate_on_submit():
-        festival = Festival(
-            name=event_form.name.data,
-            artists=event_form.name.data
-        )
-        db.session.add(festival)
-        db.session.commit()
+   #     festival = Festival(
+   #         name=event_form.name.data,
+   #         artists=event_form.name.data
+   #     )
+   #     db.session.add(festival)
+   #     db.session.commit()
         print("Successfully created event", "success")
 
     return render_template("event_creation.html", form=event_form)
