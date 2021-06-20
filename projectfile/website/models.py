@@ -15,7 +15,7 @@ class User(db.Model):
     bookings = db.relationship('Booking', backref='user')
 
 
-class Festival(db.model):
+class Festival(db.Model):
     _tablename__ = 'festivals'
     festivalID = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), index=True, unique=True, nullable=False)
@@ -31,14 +31,14 @@ class Festival(db.model):
     bookings = db.relationship('Booking', backref='festival')
 
 
-class Review(db.model):
+class Review(db.Model):
     __tablename__ = 'reviews'
     reviewID = db.Column(db.Integer, primary_key=True, nullable=False)
     text = db.Column(db.String(400), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now())
 
 
-class Booking(db.model):
+class Booking(db.Model):
     __tablename__ = 'bookings'
     bookingID = db.Column(db.Integer, primary_key=True, nullable=False)
 
