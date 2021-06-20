@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from projectfile.website.models import User, Festival, Review, Booking
+from .models import User, Festival, Review, Booking
 
 bp = Blueprint('main', __name__)
 
