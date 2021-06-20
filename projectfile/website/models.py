@@ -10,7 +10,6 @@ class User(db.Model):
     # password is never stored in the DB, an encrypted password is stored
     # the storage should be at least 255 chars long
     password_hash = db.Column(db.String(255), nullable=False)
-
     reviews = db.relationship('Review', backref='user')
     bookings = db.relationship('Booking', backref='user')
 
@@ -36,13 +35,12 @@ class Review(db.Model):
     reviewID = db.Column(db.Integer, primary_key=True, nullable=False)
     text = db.Column(db.String(400), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now())
+    UserID = db.Column(db.Integer, db.ForeignKey("users.id"))
+    festivalID = db.Column(db.Integer, db.ForeignKey("festivals.id"))
 
 
 class Booking(db.Model):
     __tablename__ = 'bookings'
     bookingID = db.Column(db.Integer, primary_key=True, nullable=False)
-
-
-# foriegn keys
-UserID = db.Column(db.Integer, db.ForeignKey("users.id"))
-festivalID = db.Column(db.Integer, db.ForeignKey("festivals.id"))
+    UserID = db.Column(db.Integer, db.ForeignKey("users.id"))
+    festivalID = db.Column(db.Integer, db.ForeignKey("festivals.id"))
