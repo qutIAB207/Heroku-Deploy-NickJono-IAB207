@@ -3,13 +3,24 @@ from flask import (
 )
 from werkzeug.security import generate_password_hash, check_password_hash
 #from .models import User
-from .forms import LoginForm, RegisterForm
+from .forms import LoginForm, RegisterForm, CreateEventForm
 from flask_login import login_user, login_required, logout_user
+from flask_wtf import FlaskForm
 from . import db
 
 
 # create a blueprint
 bp = Blueprint('auth', __name__)
+
+@bp.route('/event_creation', methods=['GET', 'POST'])
+def create():
+    print(f'Method Type: {request.method}')
+    event_form = CreateEventForm()
+
+    if event_form.validate_on_submit():
+        print("Succussfully Created Event", "success")
+    
+    return render_template("templates/event.creation.html", form=event_form)
 
 # test
 
