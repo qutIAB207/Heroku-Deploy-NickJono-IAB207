@@ -24,7 +24,8 @@ def festival(festivalID):
     if event_form.validate_on_submit():
         review = Review(
             name=event_form.user_name.data,
-            text=event_form.comment.data
+            text=event_form.comment.data,
+            festivalID=festivalID
         )
         db.session.add(review)
         db.session.commit()
