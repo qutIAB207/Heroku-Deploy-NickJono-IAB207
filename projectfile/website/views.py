@@ -1,7 +1,8 @@
 from projectfile.website import forms
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, flash
 from .models import User, Festival, Review, Booking
 from flask_sqlalchemy import SQLAlchemy
+from . import db
 
 bp = Blueprint('main', __name__)
 db = SQLAlchemy()
@@ -32,12 +33,12 @@ def event_creation():
     event_form = forms.CreateEventForm()
 
     if event_form.validate_on_submit():
-   #     festival = Festival(
-   #         name=event_form.name.data,
-   #         artists=event_form.name.data
-   #     )
-   #     db.session.add(festival)
-   #     db.session.commit()
-        print("Successfully created event", "success")
+        festival = Festival(
+            name=event_form.name.data,
+            artists=event_form.name.data
+        )
+        db.session.add(festival)
+        db.session.commit()
+        flash("Successfully created {event_form.name.data}", "success")
 
     return render_template("event_creation.html", form=event_form)
