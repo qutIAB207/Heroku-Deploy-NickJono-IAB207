@@ -7,10 +7,10 @@ bp = Blueprint('main', __name__)
 @bp.route('/')
 def landing():
     festivals = Festival.query.all()
-    return render_template('landing.html', festivals=festivals)
+    return render_template('landing.html', festivals=festivals, festival_length=festivals.count())
 
 
-@bp.route('/festival/<festivalID>')
+@bp.route('/festival/id=<festivalID>')
 def festival(festivalID):
     festivals = Festival.query.filter_by(id=festival.festivalID).first()
     return render_template('festival.html', festivals=festivals)
