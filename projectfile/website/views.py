@@ -46,7 +46,6 @@ def event_creation():
     event_form = forms.CreateEventForm()
 
     if event_form.validate_on_submit():
-<<<<<<< HEAD
         festival = Festival(
             name=event_form.name.data,
             artists=event_form.name.data
@@ -55,14 +54,5 @@ def event_creation():
         db.session.commit()
         flash("Successfully created {event_form.name.data}", "success")
         return redirect(url_for('main.festival'), id=event_form.id)
-=======
-       #     festival = Festival(
-       #         name=event_form.name.data,
-       #         artists=event_form.name.data
-       #     )
-       #     db.session.add(festival)
-       #     db.session.commit()
-        print("Successfully created event", "success")
->>>>>>> 3129a25f77512fe5b22e66b61fd4d72e740ac7fc
 
     return render_template("event_creation.html", form=event_form)
