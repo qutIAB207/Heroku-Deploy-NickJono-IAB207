@@ -25,11 +25,6 @@ def account():
     return render_template('account.html')
 
 
-@bp.route('/event_creation')
-def event_creation():
-    return render_template('event_creation.html', form=)
-
-
 @bp.route('/event_creation', methods=['GET', 'POST'])
 def event_creation():
     print(f'Method Type: {request.method}')
