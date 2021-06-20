@@ -1,36 +1,36 @@
-from projectfile.website.views import festival
-from flask import (
-    Blueprint, flash, render_template, request, url_for, redirect
-)
-from werkzeug.security import generate_password_hash, check_password_hash
-from .models import Festival
-from .forms import LoginForm, RegisterForm, CreateEventForm
-from flask_login import login_user, login_required, logout_user
-from flask_wtf import FlaskForm
-from . import db
+#from projectfile.website.views import festival
+# from flask import (
+#    Blueprint, flash, render_template, request, url_for, redirect
+# )
+#from werkzeug.security import generate_password_hash, check_password_hash
+#from .models import Festival
+#from .forms import LoginForm, RegisterForm, CreateEventForm
+#from flask_login import login_user, login_required, logout_user
+#from flask_wtf import FlaskForm
+##from . import db
 
 
 # create a blueprint
-bp = Blueprint('auth', __name__, url_prefix='/templates')
+#bp = Blueprint('auth', __name__, url_prefix='/templates')
 
 
-@bp.route('/event_creation', methods=['GET', 'POST'])
-def create():
-    print(f'Method Type: {request.method}')
-    event_form = CreateEventForm()
+# @bp.route('/event_creation', methods=['GET', 'POST'])
+# def create():
+#    print(f'Method Type: {request.method}')
+#    event_form = CreateEventForm()
 
-    if event_form.validate_on_submit():
-        # event = Festival(
-        # name=event_form.name.data,
-        # artists=event_form.name.data
+#    if event_form.validate_on_submit():
+# event = Festival(
+# name=event_form.name.data,
+# artists=event_form.name.data
 
-        # )
-        # db.session.add(festival)
-        # db.session.commit()
-        print("Succussfully Created Event", "success")
-        # return redirect(url_for('auth.create'))
+# )
+# db.session.add(festival)
+# db.session.commit()
+print("Succussfully Created Event", "success")
+# return redirect(url_for('auth.create'))
 
-    # return render_template("templates/event.creation.html", form=event_form)
+# return render_template("templates/event.creation.html", form=event_form)
 
 
 # test

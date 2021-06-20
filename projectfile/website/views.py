@@ -1,5 +1,7 @@
-from flask import Blueprint, render_template
+from projectfile.website import forms
+from flask import Blueprint, render_template, request
 from .models import User, Festival, Review, Booking
+from projectfile.main import db
 
 bp = Blueprint('main', __name__)
 
@@ -25,4 +27,21 @@ def account():
 
 @bp.route('/event_creation')
 def event_creation():
-    return render_template('event_creation.html')
+    return render_template('event_creation.html', form=)
+
+
+@bp.route('/event_creation', methods=['GET', 'POST'])
+def event_creation():
+    print(f'Method Type: {request.method}')
+    event_form = forms.CreateEventForm()
+
+    if event_form.validate_on_submit():
+        festival = Festival(
+            name=event_form.name.data,
+            artists=event_form.name.data
+        )
+        db.session.add(festival)
+        db.session.commit()
+        print("Successfully created event", "success")
+
+    return render_template("event_creation.html", form=event_form)
