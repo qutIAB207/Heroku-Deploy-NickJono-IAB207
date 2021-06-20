@@ -49,64 +49,10 @@
             <h2>
                 Admin Event Creation
             </h2>
-            <form>
-                <p>
-                    Name:
-                    <br>
-                    <input class="form-control me-2" type="search" placeholder="Enter festival name"
-                        aria-label="Search">
-                    <br>
-                <p>
-                    Venue:
-                    <br>
-                    <input class="form-control me-2" type="search" placeholder="Enter Venue" aria-label="Search">
-                    <br>
-                    Genre:
-                </p>
-                <div class="dropdown" style="margin-left: 20px;">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Select a genre
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Pop</a>
-                        <a class="dropdown-item" href="#">Hip Hop</a>
-                        <a class="dropdown-item" href="#">Rock</a>
-                        <a class="dropdown-item" href="#">EDM</a>
-                        <a class="dropdown-item" href="#">Folk</a>
-                    </div>
-                </div>
-                <p style="margin-top: 0px;">
-                    <br>
-                    Artists:
-                    <br>
-                    <input class="form-control me-2" type="search" placeholder="Enter artists" aria-label="Search">
-                    <br>
-                    Display Image:
-                    <span style="margin-left: 20px;">
-                        <a class="btn btn-outline-secondary" role="button">Select from file</a>
-                    </span>
-                    <br>
-                    <br>
-                    Dates and Times:
-                </p>
-                <div class="container-fluid" style="margin-left: 20px; margin-right: 20px;">
-                    <div class="row" name="row1"><br><input class="datetime-input" type="datetime-local" value="">
-                    </div>
-                </div>
-                <br>
-                <br>
-                <p>
-                    Description
-                    <textarea class="form-control me-2" type="search" placeholder="Enter Description"
-                        aria-label="Search" rows="3"></textarea>
-                </p>
-                <br>
-                <p style="margin-bottom: 50px;">
-                    <button style="float: right;" class="btn btn-outline-primary" type="submit">Confirm</button>
-                </p>
+            
                 
-            </form>
+                {{wtf.quick_form(form)}}
+            
         </div>
     </main>
 
