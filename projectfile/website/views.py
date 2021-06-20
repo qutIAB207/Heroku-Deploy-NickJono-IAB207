@@ -20,12 +20,12 @@ def festival(festivalID):
     event_form = forms.ReviewForm()
 
     if event_form.validate_on_submit():
-        review = Review(
-            user_name=event_form.user_name.data,
-            comment=event_form.comment.data
-        )
-        db.session.add(review)
-        db.session.commit()
+        # review = Review(
+        #    user_name=event_form.user_name.data,
+        #    comment=event_form.comment.data
+        # )
+        # db.session.add(review)
+        # db.session.commit()
         print("Successfully created review", "success")
 
     festivals = Festival.query.filter_by(festivalID=festivalID).first()
@@ -44,12 +44,12 @@ def event_creation():
     event_form = forms.CreateEventForm()
 
     if event_form.validate_on_submit():
-   #     festival = Festival(
-   #         name=event_form.name.data,
-   #         artists=event_form.name.data
-   #     )
-   #     db.session.add(festival)
-   #     db.session.commit()
+       #     festival = Festival(
+       #         name=event_form.name.data,
+       #         artists=event_form.name.data
+       #     )
+       #     db.session.add(festival)
+       #     db.session.commit()
         print("Successfully created event", "success")
 
     return render_template("event_creation.html", form=event_form)
