@@ -20,19 +20,17 @@ def create():
     event_form = CreateEventForm()
 
     if event_form.validate_on_submit():
-        #event = Festival(
-            #name=event_form.name.data,
-            #artists=event_form.name.data
-            
-        #)
-        #db.session.add(festival)
-        #db.session.commit()
+        # event = Festival(
+        # name=event_form.name.data,
+        # artists=event_form.name.data
+
+        # )
+        # db.session.add(festival)
+        # db.session.commit()
         print("Succussfully Created Event", "success")
-        #return redirect(url_for('auth.create'))
-    
-    return render_template("templates/event.creation.html", form=event_form)
+        # return redirect(url_for('auth.create'))
 
-
+    # return render_template("templates/event.creation.html", form=event_form)
 
 
 # test
