@@ -4,10 +4,6 @@ from wtforms.fields import TextAreaField, SubmitField, StringField, PasswordFiel
 from wtforms.validators import InputRequired, Length, Email, EqualTo
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 
-#class Event:
-#    def __init__(self, name, artists):
-#        self.name = name
-#        self.artists = artists
 
 class CreateEventForm(FlaskForm):
     
