@@ -15,8 +15,9 @@ def create_app():
     app = Flask(__name__)
     app.debug = True
     app.secret_key = 'utroutoru'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     # set the app configuration data
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sitedata.sqlite'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///festivaldata.sqlite'
     # initialize db with flask app
     db.init_app(app)
 
