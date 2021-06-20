@@ -10,7 +10,8 @@ from . import db
 
 
 # create a blueprint
-bp = Blueprint('auth', __name__)
+bp = Blueprint('auth', __name__, url_prefix='/templates')
+
 
 @bp.route('/event_creation', methods=['GET', 'POST'])
 def create():
