@@ -1,9 +1,10 @@
 from projectfile.website import forms
 from flask import Blueprint, render_template, request
 from .models import User, Festival, Review, Booking
-from projectfile.main import db
+from flask_sqlalchemy import SQLAlchemy
 
 bp = Blueprint('main', __name__)
+db = SQLAlchemy()
 
 
 @bp.route('/')
