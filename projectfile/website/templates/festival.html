@@ -44,21 +44,20 @@
         <div class="polaroid">
             <img src="img/festival_img_3.jpg" alt="Could not display image" style="width:100%; margin-top: -20%">
             <div class="container">
-                <h1>Festival 3</h1>
+                {% for festival in festivals %}
+                <h1>{{festival.name}}</h1>
                 <p>
-                    Genre: Pop
+                    Genre: {{festival.genre}}
                     <br>
-                    Dates and Times: Friday June 25 at 3:00pm - Sunday June 27 at 9:30pm
+                    Dates and Times: {{festival.date}} at {{festival.time}}
                     <br>
-                    Location: Sydney
+                    Artists: {{festival.artists}}
                     <br>
-                    Additional Information:
+                    Venue: {{festival.venue}}
                     <br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Integer nisi nisi, aliquet non tellus ac, varius imperdiet metus.
-                    Donec varius tellus sit amet neque fringilla tincidunt eget quis ligula.
-                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                    Nam et congue velit. Sed imperdiet molestie eros.
+                    Status: {{festival.status}}
+                    <br>
+                    Tickets Available: {{festival.ticket_availability}}
                 </p>
                 <div class="button-row">
                     <a href="{{ url_for('main.landing')}}" class="btn btn-outline-secondary festival-btn"
@@ -85,8 +84,9 @@
                     </div>
                 </div>
                 <br>
+                {% endfor %}
                 <p>
-                    <b style="font-size: 24px">Comments:</b>
+                    <b style="font-size: 24px">Reviews:</b>
                 </p>
                 <form class="comment-form">
                     <input class="form-control me-2" type="search" placeholder="Add a comment..." aria-label="Search">
@@ -94,15 +94,14 @@
                     <button style="float: right;" class="btn btn-outline-primary" type="submit">Post Comment</button>
                 </form>
                 <br>
+                {% for review in reviews %}
                 <p>
-                    <b>User 10754431</b>
+                    <b>{{review.user.name}}</b>
+                    <br>This review was posted at: {{review.created_at}}
                     <br>
-                    Quisque nisl augue, laoreet ac porttitor at, ornare non sapien.
-                    Nam cursus risus et nisi efficitur, sed mollis justo interdum.
-                    Phasellus venenatis eget lorem eget eleifend. Donec pellentesque fermentum tellus.
-                    Pellentesque mattis elit eget velit porttitor, in gravida libero aliquet.
-                    Etiam sed enim pellentesque, commodo dolor nec, varius tellus. Aenean ac posuere ipsum.
+                    {{review.text}}
                 </p>
+                {% endfor %}
             </div>
         </div>
     </main>
