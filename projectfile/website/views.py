@@ -20,12 +20,12 @@ def festival(festivalID):
     event_form = forms.ReviewForm()
 
     if event_form.validate_on_submit():
-        # review = Review(
-        #    user_name=event_form.user_name.data,
-        #    comment=event_form.comment.data
-        # )
-        # db.session.add(review)
-        # db.session.commit()
+        review = Review(
+            name=event_form.user_name.data,
+            text=event_form.comment.data
+        )
+        db.session.add(review)
+        db.session.commit()
         print("Successfully created review", "success")
 
     festivals = Festival.query.filter_by(festivalID=festivalID).first()
