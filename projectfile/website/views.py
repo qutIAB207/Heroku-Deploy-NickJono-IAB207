@@ -18,6 +18,18 @@ def landing():
 
 @bp.route('/festival/id=<festivalID>')
 def festival(festivalID):
+    print(f'Method Type: {request.method}')
+    event_form = forms.ReviewForm()
+
+    if event_form.validate_on_submit():
+        review = Review(
+            name=event_form.user_name.data,
+            text=event_form.comment.data
+        )
+        db.session.add(review)
+        db.session.commit()
+        print("Successfully created review", "success")
+
     festivals = Festival.query.filter_by(festivalID=festivalID).first()
     reviews = Review.query.filter_by(festivalID=festivalID)
     return render_template('festival.html', festivals=festivals, reviews=reviews)
@@ -34,6 +46,7 @@ def event_creation():
     event_form = forms.CreateEventForm()
 
     if event_form.validate_on_submit():
+<<<<<<< HEAD
         festival = Festival(
             name=event_form.name.data,
             artists=event_form.name.data
@@ -42,5 +55,14 @@ def event_creation():
         db.session.commit()
         flash("Successfully created {event_form.name.data}", "success")
         return redirect(url_for('main.festival'), id=event_form.id)
+=======
+       #     festival = Festival(
+       #         name=event_form.name.data,
+       #         artists=event_form.name.data
+       #     )
+       #     db.session.add(festival)
+       #     db.session.commit()
+        print("Successfully created event", "success")
+>>>>>>> 3129a25f77512fe5b22e66b61fd4d72e740ac7fc
 
     return render_template("event_creation.html", form=event_form)

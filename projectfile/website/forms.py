@@ -1,21 +1,24 @@
 
+from typing import Text
 from flask_wtf import FlaskForm
 from wtforms.fields import TextAreaField, SubmitField, StringField, PasswordField
 from wtforms.validators import InputRequired, Length, Email, EqualTo
+from wtforms.widgets import TextArea
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 
 
 class CreateEventForm(FlaskForm):
-    
-    name = StringField("Name:", validators=[InputRequired('Please enter an Event name')])
+
+    name = StringField("Name:", validators=[
+                       InputRequired('Please enter an Event name')])
     #genre = StringField("Genre:", validators=[InputRequired('Please select a Genre')])
-    artists = StringField("Artists:", validators=[InputRequired('Please enter Artists')])
+    artists = StringField("Artists:", validators=[
+                          InputRequired('Please enter Artists')])
     ##image = FileField(validators=[FileAllowed(photos, 'Image only!'), FileRequired('File was empty!')])
-    ##datesNtimes
+    # datesNtimes
     #description = StringField("Description:")
 
     submit = SubmitField('Create Event')
-    
 
 
 # creates the login information
@@ -43,3 +46,10 @@ class RegisterForm(FlaskForm):
 
     # submit button
     submit = SubmitField("Register")
+
+
+class ReviewForm(FlaskForm):
+    user_name = StringField("User Name", validators=[InputRequired()])
+    comment = TextAreaField("Write a comment: ", validators=[
+                            InputRequired()], widget=TextArea())
+    submit = SubmitField("Submit Review")
