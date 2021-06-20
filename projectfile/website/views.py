@@ -7,7 +7,7 @@ bp = Blueprint('main', __name__)
 @bp.route('/')
 def landing():
     festivals = Festival.query.all()
-    festivals_length = Festival.query.all().count()
+    festivals_length = Festival.query.count()
     return render_template('landing.html', festivals=festivals, festivals_length=festivals_length)
 
 
