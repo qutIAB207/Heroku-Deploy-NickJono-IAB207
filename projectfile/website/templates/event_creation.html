@@ -43,7 +43,7 @@
             </div>
         </nav>
     </header>
-    
+    {% block content %}
     <main style="display: flex; justify-content: center;">
         <div class="event-creation-form">
             <h2>
@@ -51,11 +51,11 @@
             </h2>
             
                 
-                {{wtf.quick_form(form)}}
-            
+                {{wtf.quick_form(form)}} `
+
         </div>
     </main>
-    
+    {% endblock %}
     <footer>
         <div class="footer-copyright bg-dark text-center py-3">© 2021 Copyright: JamFest Creative INC.
         </div>
