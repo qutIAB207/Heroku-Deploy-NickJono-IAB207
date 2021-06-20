@@ -43,3 +43,4 @@ class Booking(db.Model):
     bookingID = db.Column(db.Integer, primary_key=True, nullable=False)
     UserID = db.Column(db.Integer, db.ForeignKey("users.UserID"))
     festivalID = db.Column(db.Integer, db.ForeignKey("festivals.festivalID"))
+    quantity = db.Column(db.Integer, primary_key=True, nullable=False)
