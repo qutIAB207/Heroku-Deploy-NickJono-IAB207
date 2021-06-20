@@ -15,7 +15,7 @@ class User(db.Model):
 
 
 class Festival(db.Model):
-    _tablename__ = 'festivals'
+    __tablename__ = 'festivals'
     festivalID = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), index=True, unique=True, nullable=False)
     venue = db.Column(db.String(100), index=True, nullable=False)
@@ -25,7 +25,6 @@ class Festival(db.Model):
     time = db.Column(db.Time(), nullable=False)
     status = db.Column(db.String(100), nullable=False)
     ticket_availability = db.Column(db.String(100), nullable=False)
-
     reviews = db.relationship('Review', backref='festival')
     bookings = db.relationship('Booking', backref='festival')
 
