@@ -13,7 +13,7 @@ def landing():
 
 @bp.route('/festival/id=<festivalID>')
 def festival(festivalID):
-    festivals = Festival.query.filter_by(id=festival.festivalID).first()
+    festivals = Festival.query.filter_by(festivalID=festivalID).first()
     return render_template('festival.html', festivals=festivals)
 
 
