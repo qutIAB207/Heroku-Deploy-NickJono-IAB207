@@ -1,5 +1,6 @@
+from flask.helpers import url_for
 from projectfile.website import forms
-from flask import Blueprint, render_template, request, flash
+from flask import Blueprint, render_template, request, flash, redirect
 from .models import User, Festival, Review, Booking
 from flask_sqlalchemy import SQLAlchemy
 from . import db
@@ -40,5 +41,6 @@ def event_creation():
         db.session.add(festival)
         db.session.commit()
         flash("Successfully created {event_form.name.data}", "success")
+        return redirect(url_for('main.festival'), id=event_form.id)
 
     return render_template("event_creation.html", form=event_form)
