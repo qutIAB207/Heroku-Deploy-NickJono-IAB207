@@ -35,12 +35,12 @@ class Review(db.Model):
     reviewID = db.Column(db.Integer, primary_key=True, nullable=False)
     text = db.Column(db.String(400), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now())
-    UserID = db.Column(db.Integer, db.ForeignKey("users.id"))
-    festivalID = db.Column(db.Integer, db.ForeignKey("festivals.id"))
+    UserID = db.Column(db.Integer, db.ForeignKey("users.UserID"))
+    festivalID = db.Column(db.Integer, db.ForeignKey("festivals.festivalID"))
 
 
 class Booking(db.Model):
     __tablename__ = 'bookings'
     bookingID = db.Column(db.Integer, primary_key=True, nullable=False)
-    UserID = db.Column(db.Integer, db.ForeignKey("users.id"))
-    festivalID = db.Column(db.Integer, db.ForeignKey("festivals.id"))
+    UserID = db.Column(db.Integer, db.ForeignKey("users.UserID"))
+    festivalID = db.Column(db.Integer, db.ForeignKey("festivals.festivalID"))
