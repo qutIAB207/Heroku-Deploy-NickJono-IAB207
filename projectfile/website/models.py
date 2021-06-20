@@ -31,11 +31,10 @@ class Festival(db.Model):
 
 class Review(db.Model):
     __tablename__ = 'reviews'
-    reviewID = db.Column(db.Integer, primary_key=True, nullable=False)
+    reviewID = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), index=True, unique=True, nullable=False)
     text = db.Column(db.String(400), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now())
-    UserID = db.Column(db.Integer, db.ForeignKey("users.UserID"))
-    festivalID = db.Column(db.Integer, db.ForeignKey("festivals.festivalID"))
 
 
 class Booking(db.Model):
