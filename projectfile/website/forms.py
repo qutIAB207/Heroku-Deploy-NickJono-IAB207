@@ -8,15 +8,14 @@ from flask_wtf.file import FileField, FileRequired, FileAllowed
 
 
 class CreateEventForm(FlaskForm):
-
-    name = StringField("Name:", validators=[
-                       InputRequired('Please enter an Event name')])
-    #genre = StringField("Genre:", validators=[InputRequired('Please select a Genre')])
-    artists = StringField("Artists:", validators=[
-                          InputRequired('Please enter Artists')])
+    
+    name = StringField("Name:", validators=[InputRequired('Please enter an Event name')])
+    venue = StringField("Venue:", validators=[InputRequired('Please enter a Venue')])
+    genre = StringField("Genre:", validators=[InputRequired('Please select a Genre')])
+    artists = StringField("Artists:", validators=[InputRequired('Please enter Artists')])
     ##image = FileField(validators=[FileAllowed(photos, 'Image only!'), FileRequired('File was empty!')])
-    # datesNtimes
-    #description = StringField("Description:")
+    date = artists = StringField("Date:", validators=[InputRequired('Please enter date')])
+    description = StringField("Description:")
 
     submit = SubmitField('Create Event')
 
